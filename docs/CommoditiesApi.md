@@ -25,14 +25,14 @@ require 'tradewatch'
 # setup authorization
 tradewatch.configure do |config|
   # Configure API key authorization: api_key_query
-  config.api_key['api_key_query'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['api_key_query'] = 'Bearer'
+  # config.api_key_prefix['api-key'] = 'Bearer'
 
   # Configure API key authorization: api_key_header
-  config.api_key['api_key_header'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['api_key_header'] = 'Bearer'
+  # config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = tradewatch::CommoditiesApi.new
@@ -105,14 +105,14 @@ require 'tradewatch'
 # setup authorization
 tradewatch.configure do |config|
   # Configure API key authorization: api_key_query
-  config.api_key['api_key_query'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['api_key_query'] = 'Bearer'
+  # config.api_key_prefix['api-key'] = 'Bearer'
 
   # Configure API key authorization: api_key_header
-  config.api_key['api_key_header'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['api_key_header'] = 'Bearer'
+  # config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = tradewatch::CommoditiesApi.new
@@ -191,14 +191,14 @@ require 'tradewatch'
 # setup authorization
 tradewatch.configure do |config|
   # Configure API key authorization: api_key_query
-  config.api_key['api_key_query'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['api_key_query'] = 'Bearer'
+  # config.api_key_prefix['api-key'] = 'Bearer'
 
   # Configure API key authorization: api_key_header
-  config.api_key['api_key_header'] = 'YOUR API KEY'
+  config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['api_key_header'] = 'Bearer'
+  # config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = tradewatch::CommoditiesApi.new
