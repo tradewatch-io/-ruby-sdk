@@ -88,6 +88,63 @@ module tradewatch
       return data, status_code, headers
     end
 
+    # Available Exchanges
+    # Get list of available cryptocurrency exchanges
+    # @param [Hash] opts the optional parameters
+    # @return [CryptoExchangesList]
+    def crypto_get_exchanges(opts = {})
+      data, _status_code, _headers = crypto_get_exchanges_with_http_info(opts)
+      data
+    end
+
+    # Available Exchanges
+    # Get list of available cryptocurrency exchanges
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(CryptoExchangesList, Integer, Hash)>] CryptoExchangesList data, response status code and response headers
+    def crypto_get_exchanges_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: CryptoApi.crypto_get_exchanges ...'
+      end
+      # resource path
+      local_var_path = '/crypto/exchanges'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json']) unless header_params['Accept']
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'CryptoExchangesList'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['api_key_query', 'api_key_header']
+
+      new_options = opts.merge(
+        :operation => :"CryptoApi.crypto_get_exchanges",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CryptoApi#crypto_get_exchanges\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Last Quote
     # Get the last quote tick for the provided symbol.
     # @param symbol [String] 

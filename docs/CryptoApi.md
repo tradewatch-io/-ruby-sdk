@@ -5,6 +5,7 @@ All URIs are relative to *https://api.tradewatch.io*
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**convert**](CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion |
+| [**crypto_get_exchanges**](CryptoApi.md#crypto_get_exchanges) | **GET** /crypto/exchanges | Available Exchanges |
 | [**getQuote**](CryptoApi.md#getQuote) | **GET** /crypto/symbols/{symbol} | Last Quote |
 | [**getSymbols**](CryptoApi.md#getSymbols) | **GET** /crypto/symbols | Available Symbols |
 
@@ -76,6 +77,79 @@ end
 ### Return type
 
 [**CryptoConversion**](CryptoConversion.md)
+
+### Authorization
+
+[api_key_query](../README.md#api_key_query), [api_key_header](../README.md#api_key_header)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## crypto_get_exchanges
+
+> <CryptoExchangesList> crypto_get_exchanges
+
+Available Exchanges
+
+Get list of available cryptocurrency exchanges
+
+### Examples
+
+```ruby
+require 'time'
+require 'tradewatch'
+# setup authorization
+tradewatch.configure do |config|
+  # Configure API key authorization: api_key_query
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['api-key'] = 'Bearer'
+
+  # Configure API key authorization: api_key_header
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = tradewatch::CryptoApi.new
+
+begin
+  # Available Exchanges
+  result = api_instance.crypto_get_exchanges
+  p result
+rescue tradewatch::ApiError => e
+  puts "Error when calling CryptoApi->crypto_get_exchanges: #{e}"
+end
+```
+
+#### Using the crypto_get_exchanges_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<CryptoExchangesList>, Integer, Hash)> crypto_get_exchanges_with_http_info
+
+```ruby
+begin
+  # Available Exchanges
+  data, status_code, headers = api_instance.crypto_get_exchanges_with_http_info
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <CryptoExchangesList>
+rescue tradewatch::ApiError => e
+  puts "Error when calling CryptoApi->crypto_get_exchanges_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**CryptoExchangesList**](CryptoExchangesList.md)
 
 ### Authorization
 

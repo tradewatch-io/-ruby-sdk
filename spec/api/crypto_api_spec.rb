@@ -45,6 +45,17 @@ describe 'CryptoApi' do
     end
   end
 
+  # unit tests for crypto_get_exchanges
+  # Available Exchanges
+  # Get list of available cryptocurrency exchanges
+  # @param [Hash] opts the optional parameters
+  # @return [CryptoExchangesList]
+  describe 'crypto_get_exchanges test' do
+    it 'should work' do
+      # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
+    end
+  end
+
   # unit tests for getQuote
   # Last Quote
   # Get the last quote tick for the provided symbol.
