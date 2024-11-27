@@ -25,12 +25,20 @@ module tradewatch
     # Exchange established year
     attr_accessor :year_established
 
+    # Exchange country
+    attr_accessor :country
+
+    # Exchange website URL
+    attr_accessor :website
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'id' => :'id',
         :'name' => :'name',
-        :'year_established' => :'year_established'
+        :'year_established' => :'year_established',
+        :'country' => :'country',
+        :'website' => :'website'
       }
     end
 
@@ -44,7 +52,9 @@ module tradewatch
       {
         :'id' => :'String',
         :'name' => :'String',
-        :'year_established' => :'Integer'
+        :'year_established' => :'Integer',
+        :'country' => :'String',
+        :'website' => :'String'
       }
     end
 
@@ -86,6 +96,18 @@ module tradewatch
       else
         self.year_established = nil
       end
+
+      if attributes.key?(:'country')
+        self.country = attributes[:'country']
+      else
+        self.country = nil
+      end
+
+      if attributes.key?(:'website')
+        self.website = attributes[:'website']
+      else
+        self.website = nil
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -105,6 +127,14 @@ module tradewatch
         invalid_properties.push('invalid value for "year_established", year_established cannot be nil.')
       end
 
+      if @country.nil?
+        invalid_properties.push('invalid value for "country", country cannot be nil.')
+      end
+
+      if @website.nil?
+        invalid_properties.push('invalid value for "website", website cannot be nil.')
+      end
+
       invalid_properties
     end
 
@@ -115,6 +145,8 @@ module tradewatch
       return false if @id.nil?
       return false if @name.nil?
       return false if @year_established.nil?
+      return false if @country.nil?
+      return false if @website.nil?
       true
     end
 
@@ -125,7 +157,9 @@ module tradewatch
       self.class == o.class &&
           id == o.id &&
           name == o.name &&
-          year_established == o.year_established
+          year_established == o.year_established &&
+          country == o.country &&
+          website == o.website
     end
 
     # @see the `==` method
@@ -137,7 +171,7 @@ module tradewatch
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, name, year_established].hash
+      [id, name, year_established, country, website].hash
     end
 
     # Builds the object from hash
