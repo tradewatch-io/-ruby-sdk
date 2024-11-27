@@ -112,7 +112,7 @@ Class | Method | HTTP request | Description
 *tradewatch::CommoditiesApi* | [**getSymbols**](docs/CommoditiesApi.md#getSymbols) | **GET** /commodities/symbols | Available Symbols
 *tradewatch::CommoditiesApi* | [**getTypes**](docs/CommoditiesApi.md#getTypes) | **GET** /commodities/types | Available Types
 *tradewatch::CryptoApi* | [**convert**](docs/CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion
-*tradewatch::CryptoApi* | [**crypto_get_exchanges**](docs/CryptoApi.md#crypto_get_exchanges) | **GET** /crypto/exchanges | Available Exchanges
+*tradewatch::CryptoApi* | [**getExchanges**](docs/CryptoApi.md#getExchanges) | **GET** /crypto/exchanges | Available Exchanges
 *tradewatch::CryptoApi* | [**getQuote**](docs/CryptoApi.md#getQuote) | **GET** /crypto/symbols/{symbol} | Last Quote
 *tradewatch::CryptoApi* | [**getSymbols**](docs/CryptoApi.md#getSymbols) | **GET** /crypto/symbols | Available Symbols
 *tradewatch::CurrenciesApi* | [**convert**](docs/CurrenciesApi.md#convert) | **GET** /currencies/convert/{from}/{to} | Conversion

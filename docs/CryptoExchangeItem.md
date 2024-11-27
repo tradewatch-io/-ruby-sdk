@@ -7,6 +7,8 @@
 | **id** | **String** | Exchange identifier |  |
 | **name** | **String** | Exchange name |  |
 | **year_established** | **Integer** | Exchange established year |  |
+| **country** | **String** | Exchange country |  |
+| **website** | **String** | Exchange website URL |  |
 
 ## Example
 
@@ -16,7 +18,9 @@ require 'tradewatch'
 instance = tradewatch::CryptoExchangeItem.new(
   id: null,
   name: null,
-  year_established: null
+  year_established: null,
+  country: null,
+  website: null
 )
 ```
 

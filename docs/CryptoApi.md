@@ -5,7 +5,7 @@ All URIs are relative to *https://api.tradewatch.io*
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**convert**](CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion |
-| [**crypto_get_exchanges**](CryptoApi.md#crypto_get_exchanges) | **GET** /crypto/exchanges | Available Exchanges |
+| [**getExchanges**](CryptoApi.md#getExchanges) | **GET** /crypto/exchanges | Available Exchanges |
 | [**getQuote**](CryptoApi.md#getQuote) | **GET** /crypto/symbols/{symbol} | Last Quote |
 | [**getSymbols**](CryptoApi.md#getSymbols) | **GET** /crypto/symbols | Available Symbols |
 
@@ -88,9 +88,9 @@ end
 - **Accept**: application/json
 
 
-## crypto_get_exchanges
+## getExchanges
 
-> <CryptoExchangesList> crypto_get_exchanges
+> <CryptoExchangesList> getExchanges
 
 Available Exchanges
 
@@ -118,28 +118,28 @@ api_instance = tradewatch::CryptoApi.new
 
 begin
   # Available Exchanges
-  result = api_instance.crypto_get_exchanges
+  result = api_instance.getExchanges
   p result
 rescue tradewatch::ApiError => e
-  puts "Error when calling CryptoApi->crypto_get_exchanges: #{e}"
+  puts "Error when calling CryptoApi->getExchanges: #{e}"
 end
 ```
 
-#### Using the crypto_get_exchanges_with_http_info variant
+#### Using the getExchanges_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CryptoExchangesList>, Integer, Hash)> crypto_get_exchanges_with_http_info
+> <Array(<CryptoExchangesList>, Integer, Hash)> getExchanges_with_http_info
 
 ```ruby
 begin
   # Available Exchanges
-  data, status_code, headers = api_instance.crypto_get_exchanges_with_http_info
+  data, status_code, headers = api_instance.getExchanges_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CryptoExchangesList>
 rescue tradewatch::ApiError => e
-  puts "Error when calling CryptoApi->crypto_get_exchanges_with_http_info: #{e}"
+  puts "Error when calling CryptoApi->getExchanges_with_http_info: #{e}"
 end
 ```
 
